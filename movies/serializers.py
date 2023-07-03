@@ -33,12 +33,12 @@ class ActorDetailSerializer(serializers.ModelSerializer):
 
 class MovieListSerializer(serializers.ModelSerializer):
     """Список фильмов"""
-    rating_user = serializers.BooleanField()
-    middle_star = serializers.IntegerField()
+    # rating_user = serializers.BooleanField()
+    middle_star = serializers.IntegerField(default=0)
 
     class Meta:
         model = Movie
-        fields = ("id", "title", "tagline", "category", "rating_user", "middle_star")
+        fields = ("id", "title", "tagline", "category","middle_star")
 
 
 class ReviewCreateSerializer(serializers.ModelSerializer):

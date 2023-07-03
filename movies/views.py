@@ -58,4 +58,3 @@ class ActorsDetailView(generics.RetrieveAPIView):
     """Вывод актера или режиссера"""
     queryset = Actor.objects.all()
     serializer_class = ActorDetailSerializer
-
